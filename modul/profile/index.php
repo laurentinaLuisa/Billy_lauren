@@ -1,8 +1,13 @@
 <?php
+// Ensure the correct path to koneksi.php
+include_once __DIR__ . "/../../koneksi.php";
 
-include_once($_SERVER['DOCUMENT_ROOT'] . "/App_sia/koneksi.php");
-$koneksi = mysqli_connect("localhost", "root", "", "app_sia");
-$query = "SELECT * FROM pengguna WHERE username='$_SESSION[username]'";
+// Check if session is not already started
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+$query = "SELECT * FROM pengguna WHERE username='" . mysqli_real_escape_string($koneksi, $_SESSION['username']) . "'";
 $exec = mysqli_query($koneksi, $query);
 $data = mysqli_fetch_array($exec);
 ?>
@@ -12,15 +17,15 @@ $data = mysqli_fetch_array($exec);
             <div class="row">
                 <div class="mb-3 col-md-4">
                     <label for="username" class="form-label">Username</label>
-                    <input type="text" class="form-control" name="username" value="<?= $data['username'] ?>" readonly>
+                    <input type="text" class="form-control" name="username" value="<?= htmlspecialchars($data['username']) ?>" readonly>
                 </div>
                 <div class="mb-3 col-md-4">
                     <label for="nama_lengkap" class="form-label">Nama lengkap</label>
-                    <input type="text" class="form-control" name="nama_lengkap" value="<?= $data['nama_lengkap'] ?>">
+                    <input type="text" class="form-control" name="nama_lengkap" value="<?= htmlspecialchars($data['nama_lengkap']) ?>">
                 </div>
                 <div class="mb-3 col-md-4">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" name="email" value="<?= $data['email'] ?>">
+                    <input type="email" class="form-control" name="email" value="<?= htmlspecialchars($data['email']) ?>">
                 </div>
             </div>
             <div class="row">
@@ -40,9 +45,9 @@ $data = mysqli_fetch_array($exec);
             <hr class="text-secondary">
             <div class="d-flex">
                 <span class="me-auto text-danger">
-                    <?php 
-                    if(isset($_SESSION['pesan'])){
-                        echo $_SESSION['pesan'];
+                    <?php
+                    if (isset($_SESSION['pesan'])) {
+                        echo htmlspecialchars($_SESSION['pesan']);
                         unset($_SESSION['pesan']);
                     }
                     ?>
