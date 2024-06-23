@@ -7,8 +7,7 @@
 <input type="text" class="form-control" name="invoice">
 </div>
 <div class="mb-3 col-md-4">
-<label for="jenis-invoice" class="form-label">Jenis
-Invoice</label>
+<label for="jenis-invoice" class="form-label">Jenis Invoice</label>
 <select class="form-select" name="jenis-invoice">
 <option value="pembayaran">Pembayaran</option>
 <option value="penjualan">Penjualan</option>
@@ -46,8 +45,7 @@ Invoice</label>
 <div class="row">
 <div class="mb-3 col">
 <label for="keterangan" class="form-label">Keterangan</label>
-<textarea class="form-control" name="keterangan"
-rows="3"></textarea>
+<textarea class="form-control" name="keterangan" rows="3"></textarea>
 </div>
 </div>
 <hr>
@@ -91,8 +89,7 @@ rows="3"></textarea>
 <td>Debit</td>
 <td>-</td>
 <td>
-<a href="#editJurnal" class="text-decoration-none" data-bs-
-toggle="modal">
+<a href="#editJurnal" class="text-decoration-none" data-bs-toggle="modal">
 <i class="bi bi-pencil-square text-success"></i>
 </a>
 <a href="" class="text-decoration-none">
@@ -100,47 +97,36 @@ toggle="modal">
 </a>
 </td>
 <!-- Modal -->
-<div class="modal fade" id="editJurnal" tabindex="-1"
-aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="editJurnal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog">
 <div class="modal-content">
 <div class="modal-header">
-<h5 class="modal-title"
-id="exampleModalLabel">Edit Jurnal</h5>
-<button type="button" class="btn-close" data-bs-
-dismiss="modal" aria-label="Close"></button>
+<h5 class="modal-title" id="exampleModalLabel">Edit Jurnal</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
 <div class="row">
 <div class="mb-3 col-md-4">
-<label for="invoice" class="form-
-label">Invoice</label>
-<input type="text" class="form-control"
-name="invoice" value="#PB020324">
+<label for="invoice" class="form-label">Invoice</label>
+<input type="text" class="form-control" name="invoice" value="#PB020324">
 </div>
 <div class="mb-3 col-md-4">
-<label for="jenis-invoice" class="form-
-label">Jenis Invoice</label>
-<select class="form-select" name="jenis-
-invoice">
-<option selected
-value="pembayaran">Pembayaran</option>
+<label for="jenis-invoice" class="form-label">Jenis Invoice</label>
+<select class="form-select" name="jenis-invoice">
+<option selected value="pembayaran">Pembayaran</option>
 <option value="penjualan">Penjualan</option>
 <option value="pembelian">Pembelian</option>
 </select>
 </div>
 <div class="mb-3 col-md-4">
-<label for="tanggal" class="form-
-label">Tanggal</label>
-<input type="date" class="form-control"
-name="tanggal" value="2022-03-20">
+<label for="tanggal" class="form-label">Tanggal</label>
+<input type="date" class="form-control" name="tanggal" value="2022-03-20">
 </div>
 </div>
 <div class="row">
 <div class="mb-3 col-md-4">
 <label for="nama-akun" class="form-label">Nama
-<select class="form-select" name="nama-akun">
-Akun</label>
+<select class="form-select" name="nama-akun"> Akun</label>
 
 
 <option selected value="1">Kas</option>
@@ -151,36 +137,28 @@ Akun</label>
 </select>
 </div>
 <div class="mb-3 col-md-4">
-label">Nominal</label>
-<label for="nominal" class="form-
-<input type="number" class="form-control"
-name="nominal" value="10000000">
+ <label for="nominal" class="form-label">Nominal</label>
+ <input type="number" class="form-control" name="nominal">
 </div>
 <div class="mb-3 col-md-4">
-<label for="type" class="form-
-label">Type</label>
+<label for="type" class="form-label">Type</label>
 <select class="form-select" name="type">
-<option selected
-value="debit">Debit</option>
+<option selected value="debit">Debit</option>
 <option value="kredit">Kredit</option>
 </select>
 </div>
 </div>
 <div class="row">
 <div class="mb-3 col">
-<label for="keterangan" class="form-
-label">Keterangan</label>
-<textarea class="form-control"
-name="keterangan" rows="3"> -
+<label for="keterangan" class="form-label">Keterangan</label>
+<textarea class="form-control" name="keterangan" rows="3"> -
 </textarea>
 </div>
 </div>
 </div>
 <div class="modal-footer">
-<button type="button" class="btn btn-secondary"
-data-bs-dismiss="modal">Close</button>
-<button type="button" class="btn btn-
-primary">Simpan</button>
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<button type="button" class="btn btn-primary">Simpan</button>
 </div>
 </div>
 </div>
@@ -196,8 +174,7 @@ primary">Simpan</button>
 <td>Kredit</td>
 <td>-</td>
 <td>
-<a href="#editJurnal" class="text-decoration-none" data-
-bs-toggle="modal">
+<a href="#editJurnal" class="text-decoration-none" data-bs-toggle="modal">
 <i class="bi bi-pencil-square text-success"></i>
 </a>
 <a href="" class="text-decoration-none">
