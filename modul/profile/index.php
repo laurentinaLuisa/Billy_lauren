@@ -1,11 +1,14 @@
 <?php
+
+include_once($_SERVER['DOCUMENT_ROOT'] . "/App_sia/koneksi.php");
+$koneksi = mysqli_connect("localhost", "root", "", "app_sia");
 $query = "SELECT * FROM pengguna WHERE username='$_SESSION[username]'";
 $exec = mysqli_query($koneksi, $query);
 $data = mysqli_fetch_array($exec);
 ?>
 <div class="card mb-3">
     <div class="card-body">
-        <form action="modul/profile/aksi_profile.php" method="post">
+        <form action="http://localhost/app_sia/modul/profile/aksi_profile.php" method="post">
             <div class="row">
                 <div class="mb-3 col-md-4">
                     <label for="username" class="form-label">Username</label>
@@ -36,9 +39,9 @@ $data = mysqli_fetch_array($exec);
             </div>
             <hr class="text-secondary">
             <div class="d-flex">
-                <span class="me-auto text-gray">
-                    <?php
-                    if (isset($_SESSION['pesan'])) {
+                <span class="me-auto text-danger">
+                    <?php 
+                    if(isset($_SESSION['pesan'])){
                         echo $_SESSION['pesan'];
                         unset($_SESSION['pesan']);
                     }

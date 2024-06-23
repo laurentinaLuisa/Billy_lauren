@@ -32,6 +32,7 @@
         </form>
     </div>
 </div>
+
 <div class="card">
     <div class="card-header">
         <h3>Data Pembayaran</h3>
@@ -65,48 +66,6 @@
                             </a>
                         </td>
                     </tr>
-                    <!-- Modal -->
-                    <div class="modal fade" id="editPembayaran" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <form action="" method="post">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Data Pembayaran</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="row mb-3">
-                                            <div class="col-md-6">
-                                                <label for="invoice" class="form-label">Invoice</label>
-                                                <input type="text" class="form-control" name="invoice" value="BY110324" disabled>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="tanggal" class="form-label">Tanggal</label>
-                                                <input type="date" class="form-control" name="tanggal" value="2024-03-11">
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <div class="col-md-6">
-                                                <label for="total" class="form-label">Total</label>
-                                                <div class="input-group">
-                                                    <span class="input-group-text">Rp.</span>
-                                                    <input type="number" class="form-control" name="total" value="1000000">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="keterangan" class="form-label">Keterangan</label>
-                                                <input type="text" class="form-control" name="keterangan" value="Pembayaran tagihan indihome">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Simpan</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
                     <tr>
                         <td>2</td>
                         <td>BY100324</td>
@@ -127,4 +86,46 @@
         </div>
     </div>
 </div>
-```
+
+<!-- Modal -->
+<div class="modal fade" id="editPembayaran" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <form action="" method="post">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Data Pembayaran</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="invoice" class="form-label">Invoice</label>
+                            <input type="text" class="form-control" name="invoice" value="BY110324" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="tanggal" class="form-label">Tanggal</label>
+                            <input type="date" class="form-control" name="tanggal" value="2024-03-11">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="total" class="form-label">Total</label>
+                            <div class="input-group">
+                                <span class="input-group-text">Rp.</span>
+                                <input type="number" class="form-control" name="total" value="1000000">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="keterangan" class="form-label">Keterangan</label>
+                            <input type="text" class="form-control" name="keterangan" value="Pembayaran tagihan indihome">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
